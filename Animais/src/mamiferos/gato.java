@@ -1,6 +1,6 @@
 package mamiferos;
 
-public class gato{
+public class gato extends animal{
 	
 	private String corOlho;
 	private String sexo;

@@ -1,8 +1,10 @@
 package animal;
 
 public abstract class animal {
-	String nome;
-	Float peso;
-	int idade;
-	String corPelo;
+	public String nome;
+	public Float peso;
+	public int idade;
+	public String corPelo;
+	
+	
 }

@@ -5,8 +5,9 @@ public class main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		gato gatos[] = new gato[4];
-		
+		//gato gatos[] = new gato[4];
+		apresentar apresenta = new apresentar();
+	
 		/*gatos[1] = new gato();
 		gatos[1].setCorOlho("Azul");
 		gatos[1].setSexo("M");
@@ -14,7 +15,7 @@ public class main {
 		System.out.println(gatos[1].getCorOlho());
 		System.out.println(gatos[1].getSexo());
 		*/
-		for(int cont = 0; cont < gatos.length; cont++) {
+		/*for(int cont = 0; cont < gatos.length; cont++) {
 			
 			Scanner entrada = new Scanner(System.in);
 			
@@ -32,7 +33,7 @@ public class main {
 		
 			System.out.println("O " + (cont+1) + " gatinho tem olho " + gatos[cont].getCorOlho() + " e é do sexo " + gatos[cont].getSexo());
 		}
-		
+		*/
 	}
-
+	
 }
