@@ -1,7 +1,8 @@
 import java.util.Scanner;
 import mamiferos.gato;
 
-public class apresentar {
+
+public class apresentar{
 Scanner teclado = new Scanner(System.in);	
 
 	public apresentar() {
@@ -29,8 +30,6 @@ Scanner teclado = new Scanner(System.in);
 	public void cadastrarGato() {
 		int totCadastrados;
 		
-		
-		
 		System.out.println("Quantos gatos quer cadastrar:");
 		totCadastrados = teclado.nextInt();
 		
@@ -42,44 +41,54 @@ Scanner teclado = new Scanner(System.in);
 		
 		System.out.println("=========================================");
 		
-		//recolhendo o nome do gato
-		System.out.println("Digite o nome do gato " + (cont + 1) + ":");
+		//Adicionando o nome
+		System.out.println("Digite o nome do gato" + (cont + 1) + ":");
 		meus_gatos[cont].nome = teclado.next();
 		
-		System.out.println("nome: " + meus_gatos[cont].nome);
 		
-		//recolhendo a idade do gato
-		System.out.println("Digite a idade do gato " + (cont + 1) + ":");
+		//Adicionando a idade
+		System.out.println("Digite a idade do " + meus_gatos[cont].nome + ":");
 		meus_gatos[cont].idade = teclado.nextInt();
 		
-		System.out.println("idade: " +meus_gatos[cont].idade);
 		
-		//recolhendo o peso do gato
-		System.out.println("Digite o peso do gato " + (cont + 1) + ":");
-		meus_gatos[cont].peso = teclado.nextFloat();
+		//adicionando o peso
+		System.out.println("Digite o peso do " + meus_gatos[cont].nome + ":");
+		meus_gatos[cont].peso = teclado.nextDouble();
 		
-		System.out.println("Peso: " + meus_gatos[cont].peso);
 		
-		//recolhendo a cor do pelo do gato
-		System.out.println("Digite a cor do pelo do gato " + (cont + 1) + ":");
+		//adicionando a cor do pelo
+		System.out.println("Digite a cor do pelo do " + meus_gatos[cont].nome + ":");
 		meus_gatos[cont].corPelo = teclado.next();
 		
-		System.out.println("Cor do pelo: " + meus_gatos[cont].corPelo);
 		
-		//recolhendo a cor do olho do gato
-		System.out.println("Digite a cor do olho do gato " + (cont + 1) + ":");
+		//adicionando a cor do olho
+		System.out.println("Digite a cor do olho do " + meus_gatos[cont].nome + ":");
 		meus_gatos[cont].setCorOlho(teclado.next());
 		
-		System.out.println("Cor do olho: " + meus_gatos[cont].getCorOlho());
 		
-		//recolhendo o sexo do gato
-		System.out.println("Digite o sexo do gato " + (cont + 1) + ": [M/F]");
+		//adicionando o sexo
+		System.out.println("Digite o sexo do " + meus_gatos[cont].nome + ": [M/F]");
 		meus_gatos[cont].setSexo(teclado.next());
 		
-		System.out.println("sexo: " + meus_gatos[cont].getSexo());
+		
+		//chamando o metodo que mostra os dados do gato depois de inserido
+		showIdGato(meus_gatos);
 		
 		}
-	} 
+	}
+	
+	public void showIdGato(gato meus_Gatos[]) {
+		for(int cont = 0; cont < meus_Gatos.length; cont++) {
+			System.out.println("=========================================");
+			System.out.println("nome: " + meus_Gatos[cont].nome);
+			System.out.println("idade: " +meus_Gatos[cont].idade);
+			System.out.println("Peso: " + meus_Gatos[cont].peso);
+			System.out.println("Cor do pelo: " + meus_Gatos[cont].corPelo);
+			System.out.println("Cor do olho: " + meus_Gatos[cont].getCorOlho());
+			System.out.println("sexo: " + meus_Gatos[cont].getSexo());
+		}
+		
+	}
 	
 }
 
