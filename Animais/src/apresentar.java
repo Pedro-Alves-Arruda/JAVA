@@ -1,4 +1,6 @@
 import java.util.Scanner;
+
+import mamiferos.cachorro;
 import mamiferos.gato;
 
 
@@ -23,12 +25,17 @@ Scanner teclado = new Scanner(System.in);
 		case 1:
 			cadastrarGato();
 			break;
+		case 2:
+			
+			break;
 		}
 	}
 	
 	
 	public void cadastrarGato() {
 		int totCadastrados;
+		String resp; 
+		String compara = "s";
 		
 		System.out.println("Quantos gatos quer cadastrar:");
 		totCadastrados = teclado.nextInt();
@@ -37,12 +44,13 @@ Scanner teclado = new Scanner(System.in);
 		gato meus_gatos[] = new gato[totCadastrados];
 		
 		for(int cont = 0; cont < meus_gatos.length; cont++) {
+			
 		meus_gatos[cont] = new gato();
 		
 		System.out.println("=========================================");
 		
 		//Adicionando o nome
-		System.out.println("Digite o nome do gato" + (cont + 1) + ":");
+		System.out.println("Digite o nome do gato " + (cont + 1) + ":");
 		meus_gatos[cont].nome = teclado.next();
 		
 		
@@ -70,10 +78,16 @@ Scanner teclado = new Scanner(System.in);
 		System.out.println("Digite o sexo do " + meus_gatos[cont].nome + ": [M/F]");
 		meus_gatos[cont].setSexo(teclado.next());
 		
+		}
 		
 		//chamando o metodo que mostra os dados do gato depois de inserido
 		showIdGato(meus_gatos);
 		
+		System.out.println("Deseja cadastrar mais algum animal de estimação? [S/N]");
+		resp = teclado.next();
+		
+		if(resp.equalsIgnoreCase(compara)) {
+			apresentar apresenta = new apresentar();
 		}
 	}
 	
@@ -86,9 +100,12 @@ Scanner teclado = new Scanner(System.in);
 			System.out.println("Cor do pelo: " + meus_Gatos[cont].corPelo);
 			System.out.println("Cor do olho: " + meus_Gatos[cont].getCorOlho());
 			System.out.println("sexo: " + meus_Gatos[cont].getSexo());
+			System.out.println("\n");
 		}
 		
 	}
 	
+	
+
 }
 
