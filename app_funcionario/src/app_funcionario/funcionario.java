@@ -14,6 +14,11 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+
+
+
+
+
 public class funcionario {
 
 	protected String[] Funcionarios = new String[4];
@@ -81,12 +86,14 @@ public class funcionario {
 
 	protected void showId(ArrayList<String>funcionario, String[] dados){
 		
+		int limite = 3;
 		try {
-			for(int cont = 0; cont < funcionario.size(); cont++) {
-				for(int contador = 0; contador < funcionario.size(); contador+=4) {
-					System.out.println("=====================================");
+			for(int cont =0 ; cont < funcionario.size(); cont++) {
+				System.out.println(funcionario.get(cont));
+				if(cont == limite) {
+					System.out.println("==============================");
+					limite+=4;
 				}
-				System.out.println(dados[cont] + ":" + funcionario.get(cont));
 			}
 			
 		}catch (ArrayIndexOutOfBoundsException e) {
@@ -101,9 +108,8 @@ public class funcionario {
 	
 	protected void salvarFuncionario(String[] funcionario){
 		for(int cont = 0; cont < 4; cont++) {
-			this.setFuncionario(Funcionario);
+			this.Funcionario.add(funcionario[cont]);
 		}
-		
 	}
 
 	protected void alterarDadoCadastrado(ArrayList<String>funcionario) {
